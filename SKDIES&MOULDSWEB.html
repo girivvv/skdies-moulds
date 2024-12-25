@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK DIES & MOULDS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <!-- EmailJS Script for Form Submission (example) -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_USER_ID");
+        })();
+    </script>
+    <style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f8c52f;
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.bg-light {
+    background: #e4e4e4;
+}
+
+.bg-dark {
+    background: #333;
+}
+
+.text-white {
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+form input,
+form textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 12px 20px;
+    background: #f8c52f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e5a91f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    form input,
+    form textarea {
+        width: 90%;
+    }
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#proprietor">Proprietor</a></li>
+                <li><a href="#office">Office</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h1 class="fade-in">Welcome to SK DIES & MOULDS</h1>
+        <p class="fade-in">Manufacturers of Gravity Die, Backlite Die, and All Kinds of Machining Work</p>
+        <div class="image-container">
+            <img src="https://i.imgur.com/BxDdmpA.png" alt="Mechanical Design" class="image fade-in">
+            <img src="https://i.imgur.com/b2p3Gh4.jpeg" alt="Mechanical Design" class="image fade-in">
+        </div>
+        <a href="https://github.com/girivvv/skdies-moulds/blob/139d195a871939694a4014527a7f1145be8a4923/SK%20DIES%20%26%20MOULDS%20(updated).pdf">
+          <button>VIEW OUR BROWCHER</button>
+        </a>
+
+    </section>
+
+    <!-- Proprietor Section -->
+    <section id="proprietor" class="section bg-light">
+        <h2>Proprietor</h2>
+        <p>P. MUNUSAMY</p>
+        <div class="image-container">
+            <img src="https://i.imgur.com/FMbTGxi.jpeg" alt="Proprietor" class="image">
+        </div>
+        <p class="quote fade-in">"We believe in blending innovation with precision to deliver excellence in every project. Our commitment to quality, reliability, and customer satisfaction drives us to set new industry standards. Together with our dedicated team, we aim to shape a future where every product reflects our passion for engineering perfection."</p>
+    </section>
+
+    <!-- Office Section -->
+    <section id="office" class="section bg-light">
+        <h2>Our Office</h2>
+        <p>Take a virtual tour of our workplace.</p>
+        <div class="image-container">
+            <img src="https://i.imgur.com/tHAgM8C.jpeg" alt="Office Image" class="image fade-in">
+            <img src="https://i.imgur.com/oJijmiS.jpeg" alt="Office Image" class="image fade-in">
+            <img src="https://i.imgur.com/XFkNxWc.jpeg" alt="Office Image" class="image fade-in">
+            <img src="https://i.imgur.com/eaLse40.jpeg" alt="Office Image" class="image fade-in">
+            <img src="https://i.imgur.com/zwdniGv.jpeg" alt="Office Image" class="image fade-in">
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="section">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15543.928145027838!2d80.15972574531521!3d13.100324495629788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52630065418bc1%3A0xba423b644fa5b8fa!2sSK%20DIES%20AND%20MOULDS!5e0!3m2!1sen!2sin!4v1735100150285!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> skdies2007@reddiffmail.com</p>
+        <p><strong>Phone NO 1:</strong> +91 9791546738</p>
+        <p><strong>Phone NO 2:</strong> +91 9791546768</p>
+        <p><strong>Address:</strong> 240, 10th St, Pattravakkam, Sidco Industrial Estate, Ambattur, Chennai, Tamil Nadu 600098, India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <p>&copy; 2024 SK DIES & MOULDS. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        $(document).ready(function() {
+                    $('a[href^="#"]').on('click', function(event) {
+                        var target = $(this.getAttribute('href'));
+                        if (target.length) {
+                            event.preventDefault();
+                            $('html, body').stop().animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                        }
+                    });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 70
+                    }, 800);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
